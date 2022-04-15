@@ -6,6 +6,7 @@ import sqlalchemy
 
 app = Flask(__name__)
 db = SQLAlchemy()
+# meno = root / heslo = timebank
 engine = sqlalchemy.create_engine("mariadb+mariadbconnector://root:timebank@127.0.0.1:3306/timebank")
 SQLALCHEMY_DATABASE_URI = "mariadb+mariadbconnector://root:timebank@127.0.0.1:3306/timebank"
 SQLALCHEMY_TRACK_MODIFICATIONS = True
