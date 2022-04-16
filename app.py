@@ -6,10 +6,10 @@ import sqlalchemy
 
 app = Flask(__name__)
 db = SQLAlchemy()
-# meno = root / heslo = timebank
-engine = sqlalchemy.create_engine("mariadb+mariadbconnector://root:timebank@127.0.0.1:3306/timebank")
+# meno = root / heslo = timebank (tiez v aws)
+engine = sqlalchemy.create_engine("mariadb+mariadbconnector://root:timebank@timebank.c6fpgwhpaeto.eu-central-1.rds.amazonaws.com:3306/timebank")
 connection = engine.connect() # optional???
-SQLALCHEMY_DATABASE_URI = "mariadb+mariadbconnector://root:timebank@127.0.0.1:3306/timebank"
+SQLALCHEMY_DATABASE_URI = "mariadb+mariadbconnector://root:timebank@timebank.c6fpgwhpaeto.eu-central-1.rds.amazonaws.com:3306/timebank"
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 Base = declarative_base()
@@ -50,7 +50,7 @@ class Deal(Base):
 # Session.configure(bind=engine)
 # Session = Session()
 
-# PRIDAVANIE DAT DO DB ***AK NECHCETE PRIDAVAT PO RIADKOCH ZMENTE PREMENNU "add2db" 
+# PRIDAVANIE DAT DO DB ***AK NECHCETE PRIDAVAT PO RIADKOCH ZMENTE PREMENNU "add2db"***
 # add2db = User(name='lacike',phone='+421999999999',password='heslo1')
 # add2db = User(name='ferko',phone='+421777777777',password='heslo2')
 # add2db = Service(description='pepe',user_id=1)
