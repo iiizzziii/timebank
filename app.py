@@ -7,8 +7,8 @@ import sqlalchemy
 app = Flask(__name__)
 db = SQLAlchemy()
 
-DB_HOST = "127.0.0.1"
-# DB_HOST = "timebank.c6fpgwhpaeto.eu-central-1.rds.amazonaws.com" # AWS
+# DB_HOST = "127.0.0.1" # localhost
+DB_HOST = "timebank.c6fpgwhpaeto.eu-central-1.rds.amazonaws.com" # AWS
 DB_PORT = "3306"
 DB_NAME = "timebank"
 DB_USERNAME = "root"
